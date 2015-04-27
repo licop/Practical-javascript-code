@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>1-1</title>
+</head>
+<body>
+    <h2>除去字符串左右两边的空格</h2>
+    <input id="text" type="text" value="    过滤空格">
+    <input id="btn" type="button" value="过滤">
+    <script type="text/javascript">
+       //除去字符串左右两边的空格
+        window.onload = function() {
+            var text = document.getElementById('text');
+            var btn = document.getElementById('btn');
+            btn.onclick = function() {
+                //正则表达式是关键部分代表空格
+                 text.value = text.value.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g, '')  
+            };
+        }
+    </script>
+</body>   
+</html>

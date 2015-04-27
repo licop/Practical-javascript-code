@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>1-2</title>
+</head>
+<body>
+    <h2>验证是否为空</h2>
+    <input id="text" type="text" value="    过滤空格">
+    <input id="btn" type="button" value="验证是否为空">
+    <script type="text/javascript">
+    window.onload = function() {
+        var text = document.getElementById('text');
+        var btn = document.getElementById('btn');
+        btn.onclick = function() {
+            if (!text.value.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/, '')) {
+                alert('您的输入为空')
+            } else{
+                alert('您输入的是' + text.value);
+            }
+        }
+    }
+    </script>
+</body>   
+</html>
